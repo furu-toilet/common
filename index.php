@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="ja">
 <?php
-require_once("common.php");
+require_once "common.php";
 
 $prepare = new common();
 
@@ -30,7 +29,7 @@ if (isset($_POST["login"])) {
 }
 
 ?>
-
+<html lang="ja">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
