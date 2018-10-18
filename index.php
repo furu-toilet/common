@@ -1,3 +1,34 @@
+<?php
+require_once(common.php);
+
+$prepare = new common();
+
+if (isset($_POST["login"])) {
+  
+   if (!empty($_POST["id"]) && !empty($_POST["password"])) {
+     $id = $_POST["id"];
+     $password = $_POST["password"];
+     
+	   $blo_log = false;
+	   foreach($furu as $value){		
+		
+		 if($id == $value['id']){
+		  if($password == $value['pass']){
+				$blo_log = "true";
+				break;
+			 }
+		  }
+     }
+     if($blo_log == false){
+       echo("ユーザーIDまたはパスワードが間違っています");
+     }else {
+       header('location: info.php');
+     }
+   }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
   <head>
