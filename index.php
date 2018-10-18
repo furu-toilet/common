@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <?php
-/*
+
 require "Common.php";
 
 $prepare = new Common();
 
 $furu = $prepare->db_sql("select * from user_info;");
-*/
-if (isset($_POST["login"])) {
+
+//if (isset($_POST["login"])) {
   
    if (!empty($_POST["id"]) && !empty($_POST["password"])) {
      $id = $_POST["id"];
@@ -29,7 +29,7 @@ if (isset($_POST["login"])) {
        header('location: info.php');
      }
    }
-}
+//}
 */
 ?>
 <html lang="ja">
