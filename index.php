@@ -12,10 +12,14 @@ if (isset($_POST["login"])) {
    //if (!empty($_POST['id']) && !empty($_POST['password'])) {
      $id = $_POST['id'];
      $password = $_POST['password'];
-     
+	echo "ID" . $id;
+	echo "password". $password;
+	
 	   $blo_log = false;
-	   foreach($furu as $value){		
-		
+	   foreach($furu as $value){	
+		echo "id" . $value['id'];
+		echo "pass" . $value['password'];
+		   
 		 if($id == $value['id']){
 		  if($password == $value['pass']){
 				$blo_log = true;
