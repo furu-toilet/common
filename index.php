@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php
+<?php/*
 require_once "common.php";
 
 $prepare = new common();
@@ -27,7 +27,7 @@ if (isset($_POST["login"])) {
      }
    }
 }
-
+*/
 ?>
 <html lang="ja">
   <head>
