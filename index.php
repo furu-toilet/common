@@ -4,11 +4,11 @@
 require "Common.php";
 
 $prepare = new Common();
-/*
+
 $furu = $prepare->db_sql("select * from user_info;");
 
 //if (isset($_POST["login"])) {
-  
+/*  
    if (!empty($_POST['id']) && !empty($_POST['password'])) {
      $id = $_POST['id'];
      $password = $_POST['password'];
@@ -67,6 +67,5 @@ $furu = $prepare->db_sql("select * from user_info;");
       </div>
     </div>
     <!-- /div-->
-    <h1>furufurufuru</h1>
   </body>
 </html>
