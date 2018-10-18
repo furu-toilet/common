@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 require_once("common.php");
 
@@ -29,7 +30,6 @@ if (isset($_POST["login"])) {
 
 ?>
 
-<!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="utf-8">
