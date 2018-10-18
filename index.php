@@ -8,8 +8,8 @@ $prepare = new Common();
 $furu = $prepare->db_sql("select * from user_info;");
 
 //if (isset($_POST["login"])) {
-/*  
-   if (!empty($_POST['id']) && !empty($_POST['password'])) {
+
+   //if (!empty($_POST['id']) && !empty($_POST['password'])) {
      $id = $_POST['id'];
      $password = $_POST['password'];
      
@@ -28,9 +28,9 @@ $furu = $prepare->db_sql("select * from user_info;");
      }else {
        header('location: info.php');
      }
-   }
+  // }
 //}
-*/
+
 ?>
 <html lang="ja">
   <head>
