@@ -9,16 +9,16 @@ $furu = $prepare->db_sql("select * from user_info;");
 
 //if (isset($_POST["login"])) {
   
-   if (!empty($_POST["id"]) && !empty($_POST["password"])) {
-     $id = $_POST["id"];
-     $password = $_POST["password"];
+   if (!empty($_POST['id']) && !empty($_POST['password'])) {
+     $id = $_POST['id'];
+     $password = $_POST['password'];
      
 	   $blo_log = false;
 	   foreach($furu as $value){		
 		
 		 if($id == $value['id']){
 		  if($password == $value['pass']){
-				$blo_log = "true";
+				$blo_log = true;
 				break;
 			 }
 		  }
