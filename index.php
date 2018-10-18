@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <?php
+/*
 require "Common.php";
 
 $prepare = new Common();
 
 $furu = $prepare->db_sql("select * from user_info;");
-
+*/
 if (isset($_POST["login"])) {
   
    if (!empty($_POST["id"]) && !empty($_POST["password"])) {
