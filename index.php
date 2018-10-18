@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-require_once "Common.php";
+require "Common.php";
 
 $prepare = new Common();
 
