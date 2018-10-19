@@ -45,7 +45,7 @@ $selepass = $prepare->db_sql("select password  from user_info where id = '" . $_
     </tr>  
   </table>
   </div>
-  <div class="others"><a href="index.html">ログアウト</a></div>
+  <div class="others"><a href="index.php">ログアウト</a></div>
 </body>
 </html>
 
