@@ -3,7 +3,7 @@
 session_start();
 require "Common.php";
 $prepare = new Common();
-echo $_SESSION['id'];
+//echo $_SESSION['id'];
 
 function h($str){       //文字列出力用
         return htmlspecialchars($str,ENT_QUOTES,'UTF-8');
@@ -12,7 +12,7 @@ function h($str){       //文字列出力用
 $selename = $prepare->db_sql("select * from user_info where id = '" . $_SESSION['id'] . "';");
 $selepass = $prepare->db_sql("select password  from user_info where id = '" . $_SESSION['id'] . "';");
 
-var_dump($selename);
+//var_dump($selename);
 ?>
 <!DOCTYPE html>
 <html lang="ja">
