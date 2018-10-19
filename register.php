@@ -6,13 +6,14 @@ if (isset($_POST['register'])) {
    //if (!empty($_POST['id']) && !empty($_POST['password'])) {
    
    //inputから変数取得
-     $username = $_POST['username'];
-     $id = $_POST['id'];
-     $password = $_POST['password'];
+	$username = $_POST['username'];
+	$id = $_POST['id'];
+	$password = $_POST['password'];
+	
 
 	
 	//IDの重複CK
-		$blo_log = false;
+	$blo_log = false;
 	foreach($furusele as $value){		
 		if($id == $value['id']){
 			$blo_log = true;
