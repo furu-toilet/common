@@ -10,6 +10,8 @@ function h($str){       //文字列出力用
 
 $selename = $prepare->db_sql("select name from user_info where id =" . $_SESSION['id'] . ";");
 $selepass = $prepare->db_sql("select password  from user_info where id =" . $_SESSION['id'] . ";");
+
+var_dump($selename);
 ?>
 <!DOCTYPE html>
 <html lang="ja">
