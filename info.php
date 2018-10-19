@@ -48,3 +48,11 @@ $selepass = $prepare->db_sql("select password  from user_info where id = '" . $_
   <div class="others"><a href="index.html">ログアウト</a></div>
 </body>
 </html>
+
+
+<?php
+
+unset($_SESSION['id']);
+unset($_SESSION['password']);
+
+?>
