@@ -12,16 +12,16 @@ if (isset($_POST["login"])) {
    //if (!empty($_POST['id']) && !empty($_POST['password'])) {
      $id = $_POST['id'];
      $password = $_POST['password'];
-	//echo "ID" . mb_convert_encoding($id,"UTF-8");
-	//echo "password". $password;
+	echo "ID" . $_POST['id'];
+	echo "password". $_POST['password'];
 	
 	   $blo_log = false;
 	   foreach($furu as $value){	
-		//echo "id" . $value['id'];
-		//echo "pass" . $value['password'];
+		echo "id" . $value['id'];
+		echo "pass" . $value['password'];
 		   
-		 if($id == $value['id']){
-		  if($password == $value['pass']){
+		 if($id == "furu123"){
+		  if($password == "furu123"){
 				$blo_log = true;
 				break;
 			 }
