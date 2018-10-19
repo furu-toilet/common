@@ -3,6 +3,7 @@
 session_start();
 require "Common.php";
 $prepare = new Common();
+echo $_SESSION['id'];
 
 function h($str){       //文字列出力用
         return htmlspecialchars($str,ENT_QUOTES,'UTF-8');
