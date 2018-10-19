@@ -3,6 +3,7 @@
 require "Common.php";
 $prepare = new Common();
 $furusele = $prepare->db_sql("select * from user_info;");
+var_dump($furusele);
 if (isset($_POST['register'])) {
    //if (!empty($_POST['id']) && !empty($_POST['password'])) {
    
@@ -15,15 +16,14 @@ if (isset($_POST['register'])) {
 	
 	//IDの重複CK
 	$blo_log = false;
-	
+	/*
 	foreach($furusele as $value){		
 		if($id == $value['id']){
-			echo "dd" . $value['id'] . "mm";
 			$blo_log = true;
 			break;
 		}
 	}
-	
+	*/
      if($blo_log == true){
 	     echo "既に同じIDが登録されています。別のIDを入力してください。";
 	     
