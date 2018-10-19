@@ -16,7 +16,7 @@ if (isset($_POST["login"])) {
 	echo "password". $_POST['password'];
 	
 	   $blo_log = false;
-	   foreach($furu as $value){	
+	foreach($furu as $value){	
 		echo "id" . $value['id'];
 		echo "pass" . $value['password'];
 		   
@@ -26,7 +26,7 @@ if (isset($_POST["login"])) {
 				break;
 			 }
 		  }
-     }
+     	}
      if($blo_log == false){
        echo("ユーザーIDまたはパスワードが間違っています");
      }else {
