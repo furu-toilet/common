@@ -15,16 +15,16 @@ if (isset($_POST['register'])) {
 
 	
 	//IDの重複CK
-	$blo_log = false;
+	$blo_log = 0;
 	
 	foreach($furusele as $value){
 		if($id == $value['id']){
-			$blo_log = true;
+			$blo_log = 1;
 			break;
 		}
 	}
 	
-     if($blo_log == true){
+     if($blo_log == 0){
 	     echo "既に同じIDが登録されています。別のIDを入力してください。";
 	     
      }else {
