@@ -1,3 +1,11 @@
+
+<?php
+require "Common.php";
+$prepare = new Common();
+
+$selename = $prepare->db_sql("select name from user_info where id =" . $_SESSION['id'] . ";");
+$selepass = $prepare->db_sql("select password  from user_info where id =" . $_SESSION['id'] . ";");
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -15,12 +23,12 @@
   <table align="center">
   <tr>
     <td class="left">ユーザー名</td>
-    <td class="center">aaaaaa</td>
+    <td class="center"><?php echo $selename;?></td>
     <td class="right"><a href="changename.html">ユーザー名の変更</a></td>
   </tr>  
     <tr>
       <td class="left">ID</td>
-      <td class="center">xxxxxx</td>
+      <td class="center"><?php echo $_SESSION['id'];?></td>
       <td class="right"><a href="changename.html">IDの変更</a></td>
     </tr>  
     <tr>
