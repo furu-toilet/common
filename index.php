@@ -12,7 +12,7 @@ if (isset($_POST["login"])) {
    //if (!empty($_POST['id']) && !empty($_POST['password'])) {
      $id = $_POST['id'];
      $password = $_POST['password'];
-	echo "ID" . mb_convert_encoding($id,"UTF-8");
+	//echo "ID" . mb_convert_encoding($id,"UTF-8");
 	//echo "password". $password;
 	
 	   $blo_log = false;
