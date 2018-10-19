@@ -70,6 +70,7 @@ if (isset($_POST["login"])) {
       <a href="register.php">ユーザー登録はこちら</a>
       </div>
     </div>
+	  <h1>furu123</h1>
     <!-- /div-->
   </body>
 </html>
