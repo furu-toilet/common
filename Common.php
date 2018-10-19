@@ -27,7 +27,7 @@ Class Common {
 		try{
 			$this->stmt = $this->pdo->prepare($sql);	//SQL文の用意
 			$this->stmt->execute();				//SQL文の実行
-			var_dump(PDO::errInfo());
+			//var_dump(PDO::errInfo());
 				
 		
 		}catch(PDOExeption $e){
