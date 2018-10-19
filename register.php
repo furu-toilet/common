@@ -2,7 +2,7 @@
 require "Common.php";
 $prepare = new Common();
 $furusele = $prepare->db_sql("select * from user_info;");
-if (isset($_POST["register"])) {
+if (isset($_POST['register'])) {
    //if (!empty($_POST['id']) && !empty($_POST['password'])) {
    
    //inputから変数取得
@@ -57,7 +57,7 @@ if (isset($_POST["register"])) {
       <div class="form-group">
         <input type="password" class="form-control" name="password" required />
       </div>
-      <button type="submit" class="btn" name="signup">登録</button>
+      <button type="submit" class="btn" name="register">登録</button>
       <br>
       <a href="index.php">ログインはこちら</a>
     </form>
