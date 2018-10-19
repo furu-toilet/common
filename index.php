@@ -30,7 +30,7 @@ if (isset($_POST["login"])) {
      if($blo_log == false){
        echo("ユーザーIDまたはパスワードが間違っています");
      }else {
-       //header('location: info.php');
+       header('location: info.php');
      }
   // }
 }
