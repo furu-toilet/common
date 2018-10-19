@@ -15,7 +15,7 @@ if (isset($_POST['register'])) {
 
 	
 	//IDの重複CK
-	$blo_log = true;
+	$blo_log = false;
 	
 	foreach($furusele as $value){
 		if($id == $value['id']){
