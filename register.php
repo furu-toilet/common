@@ -20,11 +20,11 @@ if (isset($_POST['register'])) {
 		}
 	}
      if($blo_log == true){
-	     echo "既に同じIDが登録されています。別のIDを入力してください。";
+	     //echo "既に同じIDが登録されています。別のIDを入力してください。";
 	     
      }else {
 	     $prepare->db_sql_only("insert into user_info values('" . $username . "','" . $id . "','" . $password . "')");
-	     echo "登録完了";
+	     //echo "登録完了";
      }
   // }
 }
