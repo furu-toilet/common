@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <?php
 session_start();
-
 require "Common.php";
-$_SESSION['id'] = "administ";
-$_SESSION['password'] = "admin";
-
 $prepare = new Common();
 
 $furu = $prepare->db_sql("select * from user_info;");
@@ -33,7 +29,9 @@ if (isset($_POST["login"])) {
      if($blo_log == false){
        echo("ユーザーIDまたはパスワードが間違っています");
      }else {
-       header('location: info.php');
+	     $_SESSION['id'] = $id;
+	     $_SESSION['password'] = $password;
+	     header('location: info.php');
      }
   // }
 }
