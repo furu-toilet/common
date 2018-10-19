@@ -28,12 +28,12 @@ $selepass = $prepare->db_sql("select password  from user_info where id =" . $_SE
   <table align="center">
   <tr>
     <td class="left">ユーザー名</td>
-    <td class="center"><?php=h($selename) ?></td>
+    <td class="center"><?php echo $selename;?></td>
     <td class="right"><a href="changename.html">ユーザー名の変更</a></td>
   </tr>  
     <tr>
       <td class="left">ID</td>
-      <td class="center"><?php=h($_SESSION['id']) ?></td>
+      <td class="center"><?php echo $_SESSION['id']; ?></td>
       <td class="right"><a href="changename.html">IDの変更</a></td>
     </tr>  
     <tr>
