@@ -1,5 +1,5 @@
 <?php
-/*
+
 require "Common.php";
 $prepare = new Common();
 $furusele = $prepare->db_sql("select * from user_info;");
@@ -14,15 +14,17 @@ if (isset($_POST['register'])) {
 
 	
 	//IDの重複CK
-	$blo_log = false;
+	$blo_log = true;
+	/*
 	foreach($furusele as $value){		
 		if($id == $value['id']){
 			$blo_log = true;
 			break;
 		}
 	}
+	*/
      if($blo_log == true){
-	     //echo "既に同じIDが登録されています。別のIDを入力してください。";
+	     echo "既に同じIDが登録されています。別のIDを入力してください。";
 	     
      }else {
 	     $prepare->db_sql_only("insert into user_info values('" . $username . "','" . $id . "','" . $password . "')");
@@ -30,7 +32,7 @@ if (isset($_POST['register'])) {
      }
   // }
 }
-*/
+
 ?>
 
 <!DOCTYPE html>
