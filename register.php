@@ -28,8 +28,8 @@ if (isset($_POST['register'])) {
 	     echo "既に同じIDが登録されています。別のIDを入力してください。";
 	     
      }else {
-	     //$prepare->db_sql_only("insert into user_info values('" . $username . "','" . $id . "','" . $password . "')");
-	     echo "登録完了";
+	     $prepare->db_sql_only("insert into user_info values('" . $username . "','" . $id . "','" . $password . "')");
+	     //echo "登録完了";
      }
   // }
 }
