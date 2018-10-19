@@ -18,10 +18,10 @@ if (isset($_POST['register'])) {
 	$blo_log = true;
 	
 	foreach($furusele as $value){
-		//if($id == $value['id']){
+		if($id == $value['id']){
 			$blo_log = true;
 			break;
-		//}
+		}
 	}
 	
      if($blo_log == true){
