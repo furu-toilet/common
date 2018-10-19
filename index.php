@@ -4,6 +4,7 @@ session_start();
 require "Common.php";
 $prepare = new Common();
 
+
 $furu = $prepare->db_sql("select * from user_info;");
 
 if (isset($_POST["login"])) {
