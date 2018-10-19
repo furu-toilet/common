@@ -9,7 +9,7 @@ function h($str){       //文字列出力用
         return htmlspecialchars($str,ENT_QUOTES,'UTF-8');
 }
 
-$selename = $prepare->db_sql("select * from user_info where id = '" . $_SESSION['id'] . "';");
+$selename = $prepare->db_sql("select name from user_info where id = '" . $_SESSION['id'] . "';");
 $selepass = $prepare->db_sql("select password  from user_info where id = '" . $_SESSION['id'] . "';");
 
 //var_dump($selename);
@@ -31,7 +31,9 @@ $selepass = $prepare->db_sql("select password  from user_info where id = '" . $_
   <table align="center">
   <tr>
     <td class="left">ユーザー名</td>
-    <td class="center"><?php foreach($selename as $value){if($value['id'] == $id){echo $value['name']; break;} }?></td>
+    <td class="center"><?php /*foreach($selename as $value){if($value['id'] == $id){echo $value['name']; break;}*/
+            echo foreach($selename as $value){ echo $value['name']; break;};
+            }?></td>
     <td class="right"><a href="changename.html">ユーザー名の変更</a></td>
   </tr>  
     <tr>
