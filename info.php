@@ -9,8 +9,8 @@ function h($str){       //文字列出力用
         return htmlspecialchars($str,ENT_QUOTES,'UTF-8');
 }
 
-$selename = $prepare->db_sql("select * from user_info where id =" . $_SESSION['id'] . ";");
-$selepass = $prepare->db_sql("select password  from user_info where id =" . $_SESSION['id'] . ";");
+$selename = $prepare->db_sql("select * from user_info where id = '" . $_SESSION['id'] . "';");
+$selepass = $prepare->db_sql("select password  from user_info where id = '" . $_SESSION['id'] . "';");
 
 var_dump($selename);
 ?>
