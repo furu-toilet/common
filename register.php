@@ -18,7 +18,7 @@ if (isset($_POST['register'])) {
 	
 	foreach($furusele as $value){		
 		if($id == $value['id']){
-			echo $value["dd" . 'id' . "mm"];
+			echo "dd" . $value['id'] . "mm";
 			$blo_log = true;
 			break;
 		}
