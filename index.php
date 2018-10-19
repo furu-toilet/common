@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <?php
+session_start();
 
 require "Common.php";
+$_SESSION['id'];
+$_SESSION['password'];
 
 $prepare = new Common();
 
