@@ -20,8 +20,8 @@ if (isset($_POST["login"])) {
 		echo "id" . $value['id'];
 		echo "pass" . $value['password'];
 		   
-		 if($id == "furu123"){
-		  if($password == "furu123"){
+		 if($id == $value['id']){
+		  if($password == $value['password']){
 				$blo_log = true;
 				break;
 			 }
