@@ -1,3 +1,35 @@
+<?php
+require "Common.php";
+$prepare = new Common();
+$furusele = $prepare->db_sql("select * from user_info;");
+if (isset($_POST["register"])) {
+   //if (!empty($_POST['id']) && !empty($_POST['password'])) {
+   
+   //inputから変数取得
+     $username = $_POST['username'];
+     $id = $_POST['id'];
+     $password = $_POST['password'];
+     
+	//echo "password". $password;
+	
+	//IDの重複CK
+		$blo_log = false;
+	   foreach($furu as $value){		
+		 if($id == $value['id']){
+				$blo_log = true;
+				break;
+		  }
+     }
+     if($blo_log == true){
+       echo "既に同じIDが登録されています。別のIDを入力してください。";
+     }else {
+       $furuin = $prepare->db_sql_only("insert into user_info values('" . $username . "','" . $id . "','" . $password . "')");
+       echo "登録完了";
+     }
+  // }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
   <head>
