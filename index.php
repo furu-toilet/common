@@ -3,8 +3,8 @@
 session_start();
 
 require "Common.php";
-$_SESSION['id'];
-$_SESSION['password'];
+$_SESSION['id'] = "administ";
+$_SESSION['password'] = "admin";
 
 $prepare = new Common();
 
