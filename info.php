@@ -32,7 +32,7 @@ $selepass = $prepare->db_sql("select password  from user_info where id = '" . $_
   <tr>
     <td class="left">ユーザー名</td>
     <td class="center"><?php /*foreach($selename as $value){if($value['id'] == $id){echo $value['name']; break;}*/
-            echo foreach($selename as $value){ echo $value['name']; break;};
+            echo $selename['name'];
             }?></td>
     <td class="right"><a href="changename.html">ユーザー名の変更</a></td>
   </tr>  
