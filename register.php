@@ -15,21 +15,21 @@ if (isset($_POST['register'])) {
 
 	
 	//IDの重複CK
-	$blo_log = "off";
+	$blo_log = false;
 	
 	foreach($furusele as $value){
 		if($id == $value['id']){
-			$blo_log = "on";
+			$blo_log = true;
 			break;
 		}
 	}
 	
-     if($blo_log == "on"){
+     if($blo_log == true){
 	     echo "既に同じIDが登録されています。別のIDを入力してください。";
 	     
      }else {
 	     $prepare->db_sql_only("insert into user_info values('" . $username . "','" . $id . "','" . $password . "')");
-	     //echo "登録完了";
+	     echo "登録完了";
      }
   // }
 }
