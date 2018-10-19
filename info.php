@@ -3,6 +3,10 @@
 require "Common.php";
 $prepare = new Common();
 
+function h($str){       //文字列出力用
+        return htmlspecialchars($str,ENT_QUOTES,'UTF-8');
+}
+
 $selename = $prepare->db_sql("select name from user_info where id =" . $_SESSION['id'] . ";");
 $selepass = $prepare->db_sql("select password  from user_info where id =" . $_SESSION['id'] . ";");
 ?>
@@ -23,12 +27,12 @@ $selepass = $prepare->db_sql("select password  from user_info where id =" . $_SE
   <table align="center">
   <tr>
     <td class="left">ユーザー名</td>
-    <td class="center"><?php echo $selename;?></td>
+    <td class="center"><?php h($selename);?></td>
     <td class="right"><a href="changename.html">ユーザー名の変更</a></td>
   </tr>  
     <tr>
       <td class="left">ID</td>
-      <td class="center"><?php echo $_SESSION['id'];?></td>
+      <td class="center"><?php h($_SESSION['id']);?></td>
       <td class="right"><a href="changename.html">IDの変更</a></td>
     </tr>  
     <tr>
