@@ -1,5 +1,6 @@
 
 <?php
+session_start();
 require "Common.php";
 $prepare = new Common();
 
