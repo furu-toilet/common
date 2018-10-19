@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <?php
 session_start();
+unset($_SESSION['id']);
+unset($_SESSION['password']);
 require "Common.php";
 $prepare = new Common();
 
