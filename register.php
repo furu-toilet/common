@@ -1,9 +1,12 @@
 <?php
-
+session_start();
+$s_id = $_SESSION['id'];
+$s_pass = $_SESSION['password'];
+echo $s_id;
+echo $s_pass;
 require "Common.php";
 $prepare = new Common();
 $furusele = $prepare->db_sql("select * from user_info;");
-var_dump($furusele);
 if (isset($_POST['register'])) {
    //if (!empty($_POST['id']) && !empty($_POST['password'])) {
    
