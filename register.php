@@ -11,7 +11,7 @@ if (isset($_POST['register'])) {
    //if (!empty($_POST['id']) && !empty($_POST['password'])) {
    
    //inputから変数取得
-	$username = $_POST['username'];
+	$name = $_POST['username'];
 	$id = $_POST['id'];
 	$password = $_POST['password'];
 	
