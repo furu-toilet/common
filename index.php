@@ -10,9 +10,9 @@ $furu = $prepare->db_sql("select * from user_info;");
 if (isset($_POST["login"])) {
 
    //if (!empty($_POST['id']) && !empty($_POST['password'])) {
-     $id = mb_convert_encoding($_POST['id'],"UTF-8");
-     $password = mb_convert_encoding($_POST['password'],"UTF-8");
-	//echo "ID" . $id;
+     $id = $_POST['id'];
+     $password = $_POST['password'];
+	echo "ID" . mb_convert_encoding($id,"UTF-8");
 	//echo "password". $password;
 	
 	   $blo_log = false;
@@ -20,8 +20,8 @@ if (isset($_POST["login"])) {
 		//echo "id" . $value['id'];
 		//echo "pass" . $value['password'];
 		   
-		 if($id == mb_convert_encoding($value['id'],"UTF-8")){
-		  if($password == mb_convert_encoding($value['pass'],"UTF-8")){
+		 if($id == $value['id']){
+		  if($password == $value['pass']){
 				$blo_log = true;
 				break;
 			 }
