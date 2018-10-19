@@ -31,7 +31,7 @@ var_dump($selename);
   <table align="center">
   <tr>
     <td class="left">ユーザー名</td>
-    <td class="center"><?php echo $selename['name'];?></td>
+    <td class="center"><?php=h($selename['name'])?></td>
     <td class="right"><a href="changename.html">ユーザー名の変更</a></td>
   </tr>  
     <tr>
