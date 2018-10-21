@@ -32,16 +32,16 @@ $selepass = $prepare->db_sql("select password  from user_info where id = '" . $_
   <tr>
     <td class="left">ユーザー名</td>
     <td class="center"><?php echo $_SESSION['username']; ?></td>
-    <td class="right"><a href="changename.html">ユーザー名の変更</a></td>
+    <td class="right"><a href="name_change.php">ユーザー名の変更</a></td>
   </tr>  
     <tr>
       <td class="left">ID</td>
       <td class="center"><?php echo $_SESSION['id']; ?></td>
-      <td class="right"><a href="changename.html">IDの変更</a></td>
+      <td class="right"><a href="id_change.php">IDの変更</a></td>
     </tr>  
     <tr>
       <td class="left">パスワード</td>
-      <td class="center"><a href="changepass.html">パスワードの変更</a></td>
+      <td class="center"><a href="pass_change.php">パスワードの変更</a></td>
     </tr>  
   </table>
   </div>
