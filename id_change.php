@@ -30,7 +30,7 @@ if (isset($_POST["id_ch"])) {
 	     //$prepare->db_sql_only("update user_info set 'password' = '" . $newpass . "' where id = '" . $id . "' AND 'name' = " . $username . ";");		//pass変更の場合
 	     //$prepare->db_sql_only("update user_info set 'id' = '" . $newid . "' where name = '" . $name . "';");		//ID変更の場合
 	     $prepare->db_sql_only("update user_info set id = '" . $newid  . "'where name = '" . $name . "';");
-       $_SESSION['id'] = $id;
+       $_SESSION['id'] = $newid;
 	     echo "登録完了";
        header( "Location: info.php" ) ;     //ページ遷移
      }
