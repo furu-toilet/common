@@ -28,7 +28,7 @@ if (isset($_POST["id_ch"])) {
      }else {
 	     //$prepare->db_sql_only("update user_info set 'name' = '" . $name . "' where id = '" . $id . "' AND 'password' = " . $password . ";");		//名前変更の場合
 	     //$prepare->db_sql_only("update user_info set 'password' = '" . $newpass . "' where id = '" . $id . "' AND 'name' = " . $username . ";");		//pass変更の場合
-	     $prepare->db_sql_only("update user_info set 'id' = '" . $newid . "' where name = '" . $username . "' AND 'password' = " . $password . ";");		//ID変更の場合
+	     $prepare->db_sql_only("update user_info set 'id' = '" . $newid . "' where name = '" . $name . "';");		//ID変更の場合
 	     
        $_SESSION['id'] = $id;
 	     echo "登録完了";
