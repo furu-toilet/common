@@ -28,8 +28,8 @@ if (isset($_POST["id_ch"])) {
      }else {
 	     //$prepare->db_sql_only("update user_info set 'name' = '" . $name . "' where id = '" . $id . "' AND 'password' = " . $password . ";");		//名前変更の場合
 	     //$prepare->db_sql_only("update user_info set 'password' = '" . $newpass . "' where id = '" . $id . "' AND 'name' = " . $username . ";");		//pass変更の場合
-	     $prepare->db_sql_only("update user_info set 'id' = '" . $newid . "' where name = '" . $name . "';");		//ID変更の場合
-	     
+	     //$prepare->db_sql_only("update user_info set 'id' = '" . $newid . "' where name = '" . $name . "';");		//ID変更の場合
+	     $prepare->db_sql_only("insert into user_info values('101010','101010','101010');");
        $_SESSION['id'] = $id;
 	     echo "登録完了";
        header( "Location: info.php" ) ;     //ページ遷移
