@@ -16,14 +16,15 @@ if (isset($_POST["login"])) {
 	//echo "ID" . $_POST['id'];
 	//echo "password". $_POST['password'];
 	
-	   $blo_log = false;
+	   $blo_log = false;			//ログインFLG
 	foreach($furu as $value){	
 		//echo "id" . $value['id'];
 		//echo "pass" . $value['password'];
 		   
 		 if($id == $value['id']){
-		  if($password == $value['password']){
-				$blo_log = true;
+		  	if($password == $value['password']){
+				$blo_log = true;		//ログインON
+			  	$_SESSION['username'] = $value['name'];
 				break;
 			 }
 		  }
