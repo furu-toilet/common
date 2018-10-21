@@ -52,8 +52,8 @@ $selepass = $prepare->db_sql("select password  from user_info where id = '" . $_
 
 <?php
 
-unset($_SESSION['id']);
-unset($_SESSION['password']);
-unset($_SESSION['username']);
+//unset($_SESSION['id']);
+//unset($_SESSION['password']);
+//unset($_SESSION['username']);
 
 ?>
