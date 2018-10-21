@@ -1,3 +1,42 @@
+<?php
+session_start();
+require "Common.php";
+$prepare = new Common();
+$furu = $prepare->db_sql("select * from user_info;");
+
+
+if (isset($_POST["id_ch"])) {
+
+    $id = $_SESSION['id'];
+    $password = $_SESSION['password'];
+    $name = $_SESSION['username'];
+    //$newpass = $_POST['newpass'];
+	
+	$blo_log = true;			//チェックFLG
+	   
+	foreach($furu as $value){
+		if($id == $value['id']  && $password == $value['password']){
+			$blo_log = false;
+			break;
+		}
+	}
+	
+     if($blo_log == true){
+	     echo "不正なセッション情報です。";
+	     
+     }else {
+	     //$prepare->db_sql_only("update user_info set 'name' = '" . $name . "' where id = '" . $id . "' AND 'password' = " . $password . ";");		//名前変更の場合
+	     //$prepare->db_sql_only("update user_info set 'password' = '" . $newpass . "' where id = '" . $id . "' AND 'name' = " . $username . ";");		//pass変更の場合
+	     $prepare->db_sql_only("update user_info set 'id' = '" . $id . "' where name = '" . $username . "' AND 'password' = " . $password . ";");		//ID変更の場合
+	     
+       $_SESSION['id'] = $id;
+	     echo "登録完了";
+       header( "Location: info.php" ) ;     //ページ遷移
+     }
+  // }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -18,7 +57,7 @@
         <div class="form-group">
           <input id="id" type="text" class="form-control" name="id"  required />
         </div>
-        <button type="submit" class="btn" name="login">変更</button>
+        <button type="submit" class="btn" name="id_ch">変更</button>
       </form>
       <br>
       <div class="fooder">
