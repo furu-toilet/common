@@ -1,3 +1,37 @@
+<?php
+session_start();
+require "Common.php";
+$prepare = new Common();
+$furu = $prepare->db_sql("select * from user_info;");
+if (isset($_POST["id_ch"])) {
+    $id = $_SESSION['id'];
+    $password = $_SESSION['password'];
+    $name = $_SESSION['username'];
+    //$newpass = $_POST['newpass'];
+    $newname = $_POST['username'];
+	
+	$blo_log = true;			//チェックFLG
+	   
+	foreach($furu as $value){
+		if($id == $value['id']  && $password == $value['password']){
+			$blo_log = false;
+			break;
+		}
+	}	
+	
+     if($blo_log == true){
+	     echo "不正なセッション情報です。";
+	     
+     }else {
+	     $prepare->db_sql_only("update user_info set name = '" . $newname  . "'where id = '" . $id . "';");
+       $_SESSION['name'] = $newname;
+	     echo "登録完了";
+       header( "Location: info.php" ) ;     //ページ遷移
+     }
+  // }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
   <head>
