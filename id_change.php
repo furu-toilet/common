@@ -11,6 +11,7 @@ if (isset($_POST["id_ch"])) {
     $password = $_SESSION['password'];
     $name = $_SESSION['username'];
     //$newpass = $_POST['newpass'];
+    $newid = $_POST['id'];
 	
 	$blo_log = true;			//チェックFLG
 	   
@@ -19,7 +20,7 @@ if (isset($_POST["id_ch"])) {
 			$blo_log = false;
 			break;
 		}
-	}
+	}	
 	
      if($blo_log == true){
 	     echo "不正なセッション情報です。";
@@ -27,7 +28,7 @@ if (isset($_POST["id_ch"])) {
      }else {
 	     //$prepare->db_sql_only("update user_info set 'name' = '" . $name . "' where id = '" . $id . "' AND 'password' = " . $password . ";");		//名前変更の場合
 	     //$prepare->db_sql_only("update user_info set 'password' = '" . $newpass . "' where id = '" . $id . "' AND 'name' = " . $username . ";");		//pass変更の場合
-	     $prepare->db_sql_only("update user_info set 'id' = '" . $id . "' where name = '" . $username . "' AND 'password' = " . $password . ";");		//ID変更の場合
+	     $prepare->db_sql_only("update user_info set 'id' = '" . $newid . "' where name = '" . $username . "' AND 'password' = " . $password . ";");		//ID変更の場合
 	     
        $_SESSION['id'] = $id;
 	     echo "登録完了";
