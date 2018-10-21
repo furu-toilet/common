@@ -13,6 +13,7 @@ if (isset($_POST["login"])) {
    //if (!empty($_POST['id']) && !empty($_POST['password'])) {
      $id = $_POST['id'];
      $password = $_POST['password'];
+     $test = null;
 	//echo "ID" . $_POST['id'];
 	//echo "password". $_POST['password'];
 	
@@ -24,7 +25,7 @@ if (isset($_POST["login"])) {
 		 if($id == $value['id']){
 		  	if($password == $value['password']){
 				$blo_log = true;		//ログインON
-			  	$_SESSION['username'] = $value['name'];
+			  	$test = $value['name'];
 				break;
 			 }
 		  }
@@ -34,6 +35,7 @@ if (isset($_POST["login"])) {
      }else {
 	     $_SESSION['id'] = $id;
 	     $_SESSION['password'] = $password;
+	     $_SESSION['username'] = $test;
 	     header('location: info.php');
      }
   // }
