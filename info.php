@@ -32,7 +32,7 @@ $selepass = $prepare->db_sql("select password  from user_info where id = '" . $_
   <table align="center">
   <tr>
     <td class="left">ユーザー名</td>
-    <td class="center"><?php //echo $_SESSION['username']; }?></td>
+    <td class="center"><?php echo $_SESSION['username']; ?></td>
     <td class="right"><a href="changename.html">ユーザー名の変更</a></td>
   </tr>  
     <tr>
