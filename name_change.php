@@ -24,7 +24,7 @@ if (isset($_POST["name_ch"])) {
 	     
      }else {
 	     $prepare->db_sql_only("update user_info set name = '" . $newname  . "'where id = '" . $id . "';");
-       $_SESSION['name'] = $newname;
+       $_SESSION['username'] = $newname;
 	     echo "登録完了";
        header( "Location: info.php" ) ;     //ページ遷移
      }
