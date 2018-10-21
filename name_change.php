@@ -3,7 +3,7 @@ session_start();
 require "Common.php";
 $prepare = new Common();
 $furu = $prepare->db_sql("select * from user_info;");
-if (isset($_POST["id_ch"])) {
+if (isset($_POST["name_ch"])) {
     $id = $_SESSION['id'];
     $password = $_SESSION['password'];
     $name = $_SESSION['username'];
@@ -51,7 +51,7 @@ if (isset($_POST["id_ch"])) {
         <div class="form-group">
         <input type="text" class="form-control" name="username" required />
         </div>
-        <button type="submit" class="btn" name="login" onClick="login1();">変更</button>
+        <button type="submit" class="btn" name="name_ch">変更</button>
       </form>
       <br>
       <div class="fooder">
