@@ -61,7 +61,7 @@ if (isset($_POST["pass_ch"])) {
       </form>
       <br>
       <div class="fooder">
-        <a href="register.html">戻る</a>
+        <a href="info.html">戻る</a>
       </div>
     </div>
   </body>
